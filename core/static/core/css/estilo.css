@@ -141,7 +141,6 @@ button:hover{
     flex-direction: column;
     margin: auto;
     width: 600px;
-    background-image:url(../IMG/94117809-pequeño-gatito-rayado-que-grita-en-la-hierba.webp) ;
     background-repeat: no-repeat;
 }
 #formulario input{
@@ -378,4 +377,76 @@ button:hover{
     margin: 20px;
     padding: 0;
     justify-content: center;
+}
+.descripcion{
+    
+}
+.center-p{
+    margin: 5px;
+}
+.container-img{
+    min-width: 50px;
+    min-height: 50px;
+}
+#pr{
+    display: flex;
+    min-height:50vh;
+    margin: auto;
+}
+.enviar, .limpiar{
+    width: 50px;
+}
+.enviar{
+    background-color: blue;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+}
+.form-group, .form-group textarea, .form-group select{
+    width: 600px;
+}
+.form-group{
+    margin: 30px;
+}
+.modificar,.limpiar{
+    width: 50px;
+}
+.modificar{
+    margin-top: 20px;
+}
+#error{
+    display: flex;
+    width: 600px;
+    color: lime;
+    justify-content: center;
+}
+#volver{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    margin: 30px;
+    border:1px solid black;
+}
+.container-form{
+    margin: auto;
+}
+.form-group{
+    margin: 0;
+    padding: 0;
+}
+.container-pro{
+    display: flex;
+    margin: auto;
+}
+tr,table{
+    width: 1000px;
+    border:1px solid black;
+}
+th,td{
+    max-width: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    border:1px solid black;
 }

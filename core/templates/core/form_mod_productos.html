@@ -2,7 +2,7 @@
 <html>
     {% load static %}
     <head>
-        <title>Mantenci&oacute;n de Veh&iacute;culos</title>
+        <title>Modificar producto</title>
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'core/css/estilo.css'%}">
@@ -18,22 +18,48 @@
         </nav>
     </header>
     <body>
-        <div class="container">
+        <div class="container-form">
             <div><h1>Modificar Producto</h1></div>
         <div class="row">
             <form action="" method="post" id="formulario" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
-                    {{ form.as_table }}
+                    <label for="IdProducto">ID producto</label>
+                    {{ form.IdProducto }}
+
+                    <label for="NombreP">Nombre producto</label>
+                    {{ form.NombreP }}
+
+                    <label for="Descripcion">Descripcion</label>
+                    {{ form.Descripcion }}
+
+                    <label for="Categoria">Categoria</label>
+                    {{ form.Categoria }}
                 </div>
-                <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
-                <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
+                <input type="submit" class="modificar" id="modificar" value="Modificar">
+                <input type="reset" class="limpiar" id="limpiar" value="Limpiar">
+                <div id="error" role="alert">
+                    <h3>{{ mensaje }}</h3>
                 </div>
             </form>
         </div>
-        <a href="{% url 'Productos' %}">Volver</a>
+        <div id="volver"><a href="{% url 'Productos' %}">Volver</a></div>
     </div>
+    <section id="contacto">
+        <div>
+            <p>
+                ¿tienes dudas o quieres preguntar por algún producto? ¡Puedes contactarte con nosotros en estos números o en nuestras redes sociales!
+            </p>
+            <section class="numero">
+                <div>+56932823020</div>
+                <div>+56931288037</div>
+            </section>
+        </div>
+        <div>
+            <img src="{% static 'core/img/37409.png'%}" alt="">
+            <img src="{% static 'core/img/87390.png'%}" alt="">
+            <img src="{% static 'core/img/whatsapp-logo-4.png'%}" alt="">
+        </div>
+    </section>
     </body>
 </html>

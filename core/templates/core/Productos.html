@@ -46,45 +46,54 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    <!--termina-->
     <section id="pr">
-      
-      <div class="row">
+      <a href="{% url 'form_productos' %}">Ingresa un producto</a>
+      <div="container-pro">
         <!--Loop para crear productos-->
         {% for auxPr in productos %}
         <div class="center-p">
-          
-          <h3>{{auxPr.NombreP}}</h3>
-          <div class="container-img">
-              <img src="{{aux.Pr.Imagen}}" alt="">
-          </div>
-          <p>{{auxPr.Descripcion}}</p>
-          <form action="./Productos.html">
-              <button>+ info</button>
-          </form>
-          <a href="{% url 'form_mod_productos' auxPr.IdProducto %}">Modificar</a>
-          <a href="{% url 'del_producto' auxPr.IdProducto %}">Eliminar</a>
+        <table>
+          <tr>
+            <th>Nombre producto</th>
+            <th>Descripcion</th>
+            <th>Categoria</th>
+            <th>Precio</th> 
+            <th>Opciones</th> 
+          </tr>
+          <tr>
+            <td><h1>{{auxPr.NombreP}}</h1></td>
+            <td><p>{{auxPr.Descripcion}}</p></td>
+            <td>{{auxPr.Categoria}}</td>
+            <td></td>
+            <td>
+              <a href="{% url 'form_mod_productos' auxPr.IdProducto %}">Modificar</a>
+              <a href="{% url 'del_producto' auxPr.IdProducto %}">Eliminar</a>
+            </td>
+          </tr>
+        </table>
+        <br>
         </div>
         {% endfor %}
-        <a href="{% url 'form_productos' %}">Ingresa un producto</a>
       </div>
     </section>
 <!--FOOTER-->
-    <section id="contacto">
-        <div>
-            <p>
-                ¿tienes dudas o quieres preguntar por algún producto? ¡Puedes contactarte con nosotros en estos números o en nuestras redes sociales!
-            </p>
-            <section class="numero">
-                <div>+56932823020</div>
-                <div>+56931288037</div>
-            </section>
-        </div>
-        <div>
-          <img src="{% static 'core/img/37409.png'%}" alt="">
-          <img src="{% static 'core/img/87390.png'%}" alt="">
-          <img src="{% static 'core/img/whatsapp-logo-4.png'%}" alt="">
-        </div>
-    </section>
+  <section id="contacto">
+    <div>
+      <p>
+          ¿tienes dudas o quieres preguntar por algún producto? ¡Puedes contactarte con nosotros en estos números o en nuestras redes sociales!
+      </p>
+      <section class="numero">
+          <div>+56932823020</div>
+          <div>+56931288037</div>
+      </section>
+    </div>
+    <div>
+      <img src="{% static 'core/img/37409.png'%}" alt="">
+      <img src="{% static 'core/img/87390.png'%}" alt="">
+      <img src="{% static 'core/img/whatsapp-logo-4.png'%}" alt="">
+    </div>
+  </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
