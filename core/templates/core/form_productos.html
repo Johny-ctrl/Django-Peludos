@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Ingreso de Productos</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'core/css/estilo.css'%}"> <!--Mi estilo-->
+    </head>
+    <header>
+        <div>
+            <a class="none1" href=""><h1 class="size">AMIGOS PELUDOS</h1></a>
+        </div>
+        <nav>
+            <a class="none" href="{% url 'home' %}">INICIO</a>
+            <a class="none" href="{% url 'home'  %}">SOBRE NOSOTROS</a>
+            <a class="none" href="#contacto">CONTACTO</a>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <div><h1>Crear Nuevo Producto</h1></div>
+        <div class="row">
+            <form action="" method="post" id="formulario" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_table }}
+                    <label>Imagen</label>
+                    <input type="file" name="myfile">
+                </div>
+                <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                <div id="error" class="alert alert-success" role="alert">
+                    {{ mensaje }}
+                </div>
+            </form>
+            {% if uploaded_file_url %}
+            <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+            {% endif %}
+        
+          <p><a href="{% url 'home' %}">Ir a pagina principal</a></p>
+        
+        </div>
+        <a href="{% url 'Productos' %}">Volver</a>
+    </div>
+    </body>
+</html>

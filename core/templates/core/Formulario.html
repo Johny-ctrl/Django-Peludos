@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>FORMULARIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       <!--JQuery-->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'core/css/estilo.css'%}">
+    <script src="{% static 'core/js/API.js'%}"></script>
+</head>
+<header>
+    <div>
+        <a class="none1" href=""><h1 class="size">AMIGOS PELUDOS</h1></a>
+    </div>
+    <nav>
+        <a class="none" href="{% url 'home' %}">INICIO</a>
+        <a class="none" href="{% url 'home' %}">SOBRE NOSOTROS</a>
+        <a class="none" href="#contacto">CONTACTO</a>
+    </nav>
+</header>
+<body>
+    <section id="f-b">
+    <div id="titulo">
+        <h2>
+            Suscripcion
+        </h2>
+    </div>
+    <section id="datos">
+        <form action="data.html" enctype="multipart/form-data" method="get" name="suscripcion">
+            <div class="order">
+                <div class="order-form">
+                    <div class="col">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="col">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese apellido">
+                    </div>
+                    <div class="col">
+                        <label for="correo" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese su correo Electronico">
+                    </div>
+                    <div class="col">
+                        <label for="ubicacion" class="form-label">Ubicacion</label>
+                        <select class="form-select" id="regiones"></select>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <div class="col">
+                        <label for="contraseña" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="Ingrese contraseña">
+                    </div>
+                    <div class="col">
+                        <label for="Rcontraseña" class="form-label">Repita la contraseña</label>
+                        <input type="password" class="form-control" name="Rcontraseña" id="Rcontraseña" placeholder="Repita su Contraseña">
+                    </div>
+                    <div class="col">
+                        <label for="direccion" class="form-label">Direccion</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Escriba su direccion">
+                    </div>
+                </div>
+            </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Al hacer check acepta los terminos!
+                    </label>
+                </div>
+            <div id="button-form">
+                <button type="button">Continuar</button>
+            </div>
+        </form>
+    </section>
+    </section>
+    <section id="contacto">
+        <div>
+            <p>
+                ¿tienes dudas o quieres preguntar por algún producto? ¡Puedes contactarte con nosotros en estos números o en nuestras redes sociales!
+            </p>
+            <section class="numero">
+                <div>+56932823020</div>
+                <div>+56931288037</div>
+            </section>
+        </div>
+        <div>
+            <img src="{% static 'core/img/37409.png'%}" alt="">
+            <img src="{% static 'core/img/87390.png'%}" alt="">
+            <img src="{% static 'core/img/whatsapp-logo-4.png'%}" alt="">
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>

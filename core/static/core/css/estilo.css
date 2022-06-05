@@ -1,0 +1,381 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(230, 230, 230);
+    margin: 0;
+}
+
+/*Header*/
+a {
+    text-decoration: none;
+    color: black;
+}
+.size{
+    font-size: 3rem;
+}
+nav a:hover{
+    color: darkgray;
+}
+header div a:hover{
+    color: white;
+}
+.none{
+    font-weight: 600;
+    padding-right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.none1{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    min-height: 300px;
+    background-image:url(../IMG/Perro-comiendo-pasto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/*Secciones*/
+section div{
+    margin: 50px;
+}
+
+#sobrenosotros,#suscribete,#producto{
+    margin-top: 70px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+#sobrenosotros{
+    align-items: center;
+}
+/*Suscribete*/
+#suscribete{
+    align-items: center;
+}
+#sus{
+    max-width: 238.125px;
+}
+#suscribete div{
+    padding: 30px;
+    width: 33vh;
+}
+/*Contacto*/
+#contacto{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 166, 25);
+    margin-bottom: 0;
+}
+#contacto div{
+    max-width: 500px;
+    margin: 0%;
+    padding: 50px;
+}
+#contacto img{
+    max-width: 40px;
+    padding: auto;
+}
+.numero{
+    justify-content: space-between;
+    display: flex;
+    padding: auto;
+}
+/*Producto*/
+#producto{
+    background-image:  linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(../IMG/FondoA.jpg);
+    background-size: cover;
+    overflow-x: auto;
+    display: flex;
+    height: 500px;
+}
+#producto div{
+    background-color: rgb(221, 221, 221);
+    height: 350px;
+}
+/*Centrar*/
+.center{
+    padding: 10px;
+    padding-bottom: 0;
+    text-align: center;
+    border-radius: 15px;
+}
+#producto button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#producto .center{
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+/*Botones*/
+button{
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+button:hover{
+    background-color: rgb(101, 33, 165);
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 600px;
+    background-image:url(../IMG/94117809-pequeño-gatito-rayado-que-grita-en-la-hierba.webp) ;
+    background-repeat: no-repeat;
+}
+#formulario input{
+    width: 600px;
+}
+@media (max-width:1010px){
+    header{
+        flex-direction: column;
+        max-height: 350px;
+    }
+    nav{
+        padding: 70px 0px;
+    }
+    #sobrenosotros,#producto,#suscribete,#contacto{
+        flex-direction: column;
+    }
+    #producto{
+        align-items: center;
+        background-image:  linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url();
+        background-size: cover; 
+    }
+    #producto div{
+        background-color: rgb(221, 221, 221);
+        max-width: 200px;
+    }
+    #datos{
+        display: flex;
+        flex-direction: column;
+    }
+    #datos{
+        max-width: 90vh;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .order-form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-left: 35px;
+    }
+    .col{
+        padding-top: 10px;
+        padding-left: auto;
+        padding-right: auto;
+        padding-bottom: 5px;
+    }
+    #datos div{
+        margin: 0%;
+        width: 75vh;
+    }
+    .order{
+        flex-direction: column;
+        display: flex;
+
+    }
+    .col input, .col .form-select{
+        width: 70vh;
+    }
+
+}
+@media (max-width:780px){
+    #datos{
+        max-width: 50vh;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .order-form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0%;
+    }
+    .order{
+        flex-direction: column;
+        margin: auto;
+        display: flex;
+    }
+    .col input, .col .form-select{
+        max-width: 43vh;
+    }
+    #button-form{
+        max-width: 50vh;
+    }
+}
+/*carrucel*/
+.carousel-inner{
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+}
+#carouselExampleControls{
+    width: 90vh;
+    margin: auto;
+    
+}
+.carousel-control-prev{
+    width: auto;
+}
+.carousel-item {
+    text-align: center;
+    
+}
+.carousel-control-next, .carousel-control-prev{
+    height: 10%;
+    margin: auto;
+    box-shadow: none;
+    margin-right: -10px;
+    margin-left: -10px;
+    color: black;
+}
+
+.tamaño{  
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 0.1rem 0.4rem gray;
+    width: 90%;
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.cuadrito{
+    box-shadow: 0 0.1rem 0.4rem gray;
+    padding: 2px;
+    background-color: darkgray;
+}
+.Tabla{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.tamaño{
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#datos{
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 20px;
+}
+#titulo{
+    text-align: center;
+}
+#datos{
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto;
+    width: 900px;
+    height: auto;
+    min-width: 300px;
+    justify-content: space-between;
+    background-color: rgb(230,230,230);
+}
+#button-form{
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    margin: auto;
+}
+#button-form button{
+    border-radius: 10px;
+}
+#titulo{
+    margin: 0%;
+    padding: 50px;
+}
+.col{
+    margin: 10px;
+    max-width: 400px;
+}
+.order-form{
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+    min-width: 400px;
+}
+.order{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#f-b{
+    background-image:  linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(../IMG/vector-wildlife-animals-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+}
+#titulo h2{
+    color: white;
+}
+.center img{
+    max-height: 15vh;
+    max-width: 15vh;
+}
+.container-img{
+    margin: auto;
+    padding: 0;
+    max-height: 15vh;
+    max-width: 15vh;
+}
+#pr{
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    flex-direction: column;
+    overflow-x: scroll;
+    max-height: 900px;
+}
+.row{
+    display: flex;
+}
+.center-p img{
+    max-width: 15vh;
+    max-height: 15vh;
+}
+.center-p{
+    border: 1px;
+    border-color: black;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    padding: 0;
+    justify-content: center;
+}
