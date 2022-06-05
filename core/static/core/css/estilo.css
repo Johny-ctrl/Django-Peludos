@@ -422,7 +422,7 @@ button:hover{
     color: lime;
     justify-content: center;
 }
-#volver{
+.volver{
     display: flex;
     justify-content: center;
     width: 60px;
