@@ -416,11 +416,11 @@ button:hover{
 .modificar{
     margin-top: 20px;
 }
-#error{
+.error{
     display: flex;
     width: 600px;
     color: lime;
-    justify-content: center;
+    justify-content: center;    
 }
 .volver{
     display: flex;
@@ -449,4 +449,15 @@ th,td{
     min-width: 200px;
     overflow: hidden;
     border:1px solid black;
+}
+.imgc{
+    max-height: 400px;
+    max-width: 400px;
+}
+#carouselExampleControls{
+    min-height: 400px;
+    align-items: center;
+}
+#prev, #next{
+    width: 60px;
 }

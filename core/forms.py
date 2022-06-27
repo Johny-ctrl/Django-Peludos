@@ -6,4 +6,4 @@ from .models import ListaP
 class ProductoForm(ModelForm):
     class Meta: 
         model=ListaP
-        fields =['IdProducto', 'NombreP', 'Descripcion', 'Categoria']
+        fields =['IdProducto', 'NombreP', 'Descripcion', 'Categoria', 'Precio']
