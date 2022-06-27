@@ -28,20 +28,20 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="" class="d-block w-100" alt="...">
+            <img src="{% static 'core/img/juguete1.jpg'%}" class="imgc" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./IMG/Gafas-de-sol-redondas-para-perro-y-gato-accesorios-para-fotos-productos-para-mascotas.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'core/img/juguete2.jpg'%}" class="imgc" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./IMG/share.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'core/img/juguete3.jpg'%}" class="imgc" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev boton" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button id="prev" class="carousel-control-prev boton" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next boton" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <button id="next" class="carousel-control-next boton" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -65,7 +65,7 @@
             <td><h1>{{auxPr.NombreP}}</h1></td>
             <td><p>{{auxPr.Descripcion}}</p></td>
             <td>{{auxPr.Categoria}}</td>
-            <td></td>
+            <td>${{auxPr.Precio}}</td>
             <td>
               <a href="{% url 'form_mod_productos' auxPr.IdProducto %}">Modificar</a>
               <a href="{% url 'del_producto' auxPr.IdProducto %}">Eliminar</a>

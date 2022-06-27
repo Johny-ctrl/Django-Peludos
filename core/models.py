@@ -17,5 +17,6 @@ class ListaP(models.Model):
     Imagen= models.ImageField(upload_to="ImgProductos", null=True)
     Descripcion= models.TextField(max_length=300, verbose_name='Descripcion Producto')
     Categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    Precio = models.IntegerField(verbose_name='Precio')
     def __str__(self):
-        return self.IdProducto
+        return self.IdProducto 

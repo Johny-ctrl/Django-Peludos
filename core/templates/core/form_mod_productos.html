@@ -35,10 +35,13 @@
 
                     <label for="Categoria">Categoria</label>
                     {{ form.Categoria }}
+
+                    <label for="Precio">Precio</label>
+                    {{ form.Precio }}
                 </div>
                 <input type="submit" class="modificar" id="modificar" value="Modificar">
                 <input type="reset" class="limpiar" id="limpiar" value="Limpiar">
-                <div id="error" role="alert">
+                <div class="error" role="alert">
                     <h3>{{ mensaje }}</h3>
                 </div>
             </form>
